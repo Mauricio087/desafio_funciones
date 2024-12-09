@@ -1,16 +1,16 @@
-const divAzul = document.getElementById("divAzul")
-const divRojo = document.getElementById("divRojo")
-const divVerde = document.getElementById("divVerde")
-const divAmarillo = document.getElementById("divAmarillo")
+const dAzul = document.getElementById("dAzul")
+const dRojo = document.getElementById("dRojo")
+const dVerde = document.getElementById("dVerde")
+const dAmarillo = document.getElementById("dAmarillo")
 
 const cambiarColorANegro = (evento) => {
 evento.target.style.backgroundColor = "black"
 }
 
-divAzul.addEventListener("click", cambiarColorANegro);
-divRojo.addEventListener("click", cambiarColorANegro);
-divVerde.addEventListener("click", cambiarColorANegro);
-divAmarillo.addEventListener("click", cambiarColorANegro);
+dAzul.addEventListener("click", cambiarColorANegro);
+dRojo.addEventListener("click", cambiarColorANegro);
+dVerde.addEventListener("click", cambiarColorANegro);
+dAmarillo.addEventListener("click", cambiarColorANegro);
 
 let cambiaColor = "";
 
@@ -18,31 +18,31 @@ const keyDiv = document.getElementById("key");
 const nuevoDivsContainer = document.getElementById("divs-container");
 
 document.addEventListener("keydown", function (event) {
-    if (event.key === "a") {
-        cambiaColor = "pink";
-        keyDiv.style.backgroundColor = cambiaColor;
-    } else if (event.key === "s") {
-        cambiaColor = 'orange';
-        keyDiv.style.backgroundColor = cambiaColor;
-    } else if (event.key === "d") {
-        cambiaColor = "lightblue";
-        keyDiv.style.backgroundColor = cambiaColor;
-    }
+if (event.key === "a" || event.key === "A") {
+    cambiaColor = "pink";
+    keyDiv.style.backgroundColor = cambiaColor;
+} else if (event.key === "s" || event.key === "S") {
+    cambiaColor = 'orange';
+    keyDiv.style.backgroundColor = cambiaColor;
+} else if (event.key === "d" || event.key === "D") {
+    cambiaColor = "lightblue";
+    keyDiv.style.backgroundColor = cambiaColor;
+}
 
-    else if (event.key === "q") {
-        crearNuevoDiv("purple");
-    }else if (event.key === "w") {
-        crearNuevoDiv("gray");
-    } else if (event.key === "e") {
-        crearNuevoDiv("brown");
-    }
-    });
+else if (event.key === "q" || event.key === "Q") {
+    crearNuevoDiv("purple");
+}else if (event.key === "w" || event.key === "W") {
+    crearNuevoDiv("gray");
+} else if (event.key === "e" || event.key === "E") {
+    crearNuevoDiv("brown");
+}
+});
 
-    function crearNuevoDiv(color) {
-    const newDiv = document.createElement('div');
-    newDiv.className = "dynamic-div";
-    newDiv.style.backgroundColor = color;
-    nuevoDivsContainer.appendChild(newDiv);
-    }
+function crearNuevoDiv(color) {
+const newDiv = document.createElement('div');
+newDiv.className = "creador-div";
+newDiv.style.backgroundColor = color;
+nuevoDivsContainer.appendChild(newDiv);
+}
 
 
